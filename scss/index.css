@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button, input {
+  outline: none;
+  border: none;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.header {
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.header .container {
+  height: 100%;
+}
+.header .container nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .container nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: "Dela Gothic One", cursive;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.header .container nav .logo a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.header .container nav .main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 10px;
+  gap: 0 50px;
+}
+@media only screen and (max-width: 1023px) {
+  .header .container nav .main-menu {
+    background-color: black;
+    flex-direction: column;
+    width: 50%;
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    gap: 50px 0;
+    z-index: 100;
+  }
+}
+.header .container nav .main-menu li a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.header .container nav .main-menu li:hover a {
+  color: #e90a27;
+  transition: 0.3s ease;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-left: 98px;
+  padding-top: 120px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hero .hero-content {
+  position: absolute;
+  z-index: 98;
+  inset: 0;
+  padding-left: 98px;
+  padding-top: 170px;
+}
+.hero .hero-content .slider {
+  height: 100%;
+  position: relative;
+}
+.hero .hero-content .slider .slide {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  display: flex;
+}
+.hero .hero-content .slider .slide .food-info, .hero .hero-content .slider .slide .food-image {
+  position: relative;
+  width: 50%;
+}
+.hero .hero-content .slider .slide .food-image img {
+  position: absolute;
+  width: 100%;
+  top: -120px;
+  transform: translateX(450px);
+  transition: transform 1s ease-in-out;
+}
+.hero .hero-content .slider .slide .food-info {
+  color: #ffffff;
+}
+.hero .hero-content .slider .slide .food-info__name {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.hero .hero-content .slider .slide .food-info__name h2 {
+  font-family: "Dela Gothic One", cursive;
+  font-size: 48px;
+  font-weight: 600;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateY(-100%);
+  transition: transform 0.9s ease-in-out;
+}
+.hero .hero-content .slider .slide .food-info__desc p {
+  line-height: 26px;
+  transform: translateY(-100%);
+  transition: transform 0.9s ease-in-out;
+}
+.hero .hero-content .slider .slide .food-info__name, .hero .hero-content .slider .slide .food-info__desc {
+  overflow: hidden;
+}
+.hero .hero-content .slider .slide .food-info__btn {
+  width: 0;
+  height: 80px;
+  display: inline-flex;
+  text-decoration: none;
+  width: 0;
+  height: 80px;
+  border-radius: 0;
+  background-color: #e90a27;
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, width 0.6s ease-in-out, border-radius 0.3s ease-in-out;
+  transition-delay: 0s, 0.9s, 1.5s;
+}
+.hero .hero-content .slider .slide .food-info__btn:hover {
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+.hero .hero-content .slider .slide.active {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  display: flex;
+}
+.hero .hero-content .slider .slide.active .food-image img {
+  transform: translateX(0);
+}
+.hero .hero-content .slider .slide.active .food-info__name h2 {
+  transform: translateY(0);
+}
+.hero .hero-content .slider .slide.active .food-info__desc p {
+  transform: translateY(0);
+}
+.hero .hero-content .slider .slide.active .food-info__btn {
+  width: 250px;
+  border-radius: 40px;
+  transition: font-weight 0.3s ease-in-out;
+}/*# sourceMappingURL=index.css.map */
