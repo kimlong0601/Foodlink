@@ -1,0 +1,54 @@
+.product{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    margin-top: $header-height;
+    .product-title{
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+    .row{
+        .product-card{
+            width: 100%;
+            text-align: center;
+            @include flex(center,center);
+            flex-direction: column;
+            margin: 15px 0;
+            img{
+                width: 80%;
+                height: 150px;
+            }
+            &__title{
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-top: 10px;
+            }
+            &__desc{
+                font-size: 15px;
+            }
+            &__price{
+                font-weight: 700;
+                margin: -10px 0;
+            }
+            &__btn{
+                @include flex(center,center);
+                width: 120px;
+                height: 40px;
+                background-color: $main-color;
+                color: $text-white;
+                text-decoration: none;
+                border-radius: 5px;
+                text-transform: uppercase;
+            }
+        }
+        .col-sm-6{
+            img{
+                width: 40%;
+                
+            }
+        }
+    }
+}
