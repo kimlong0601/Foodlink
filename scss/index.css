@@ -41,7 +41,7 @@ button, input {
 .wrapper {
   max-width: 1600px;
   margin: 0 auto;
-  background: #ffffff;
+  background: #f0f0f0;
 }
 
 .header {
@@ -51,6 +51,23 @@ button, input {
   top: 0;
   left: 0;
   z-index: 99;
+  transition: 0.3s ease;
+}
+@media only screen and (max-width: 1023px) {
+  .header {
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    height: 60px;
+  }
+}
+.header.shrink {
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
 }
 .header .container {
   height: 100%;
@@ -190,7 +207,7 @@ button, input {
     flex-direction: column-reverse;
   }
   .hero .hero-content .slider .slide .food-image {
-    height: 45%;
+    height: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,7 +220,7 @@ button, input {
     left: unset;
   }
   .hero .hero-content .slider .slide .food-info {
-    height: 55%;
+    height: 70%;
   }
 }
 .hero .hero-content .slider .slide .food-info, .hero .hero-content .slider .slide .food-image {
@@ -234,8 +251,6 @@ button, input {
   width: max-content;
   transform: translateY(-100%);
   transition: transform 0.9s ease-in-out;
-  -webkit-text-stroke: 1px #ffffff;
-  color: transparent;
 }
 .hero .hero-content .slider .slide .food-info__desc p {
   line-height: 26px;
@@ -367,6 +382,12 @@ button, input {
   width: 80%;
   height: 150px;
 }
+@media only screen and (max-width: 600px) {
+  .product .row .product-card img {
+    height: 150px;
+    width: 100%;
+  }
+}
 .product .row .product-card__title {
   text-transform: uppercase;
   font-weight: 700;
@@ -393,4 +414,103 @@ button, input {
 }
 .product .row .col-sm-6 img {
   width: 40%;
+}
+@media only screen and (max-width: 600px) {
+  .product .row .col-sm-6 img {
+    width: 100%;
+  }
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding: 50px 0;
+  margin-top: 120px;
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 25px 0;
+  }
+}
+.footer ul li {
+  margin: 6px 0;
+}
+.footer ul li p {
+  color: #b9b9b9;
+}
+.footer ul li h5 {
+  text-transform: uppercase;
+}
+.footer ul li a {
+  text-decoration: none;
+  color: #b9b9b9;
+  transition: 0.3s ease;
+}
+.footer ul li a:hover {
+  color: #e90a27;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+.footer form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media only screen and (max-width: 600px) {
+  .footer form {
+    margin-top: 15px;
+  }
+}
+.footer form input {
+  width: 320px;
+  height: 50px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #f0f0f0;
+  margin-right: 10px;
+}
+.footer form button {
+  width: 50px;
+  height: 50px;
+  background: #e90a27;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.footer form button i {
+  color: #ffffff;
+  font-size: 24px;
+  transition: 0.3s ease;
+}
+.footer form button:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+.footer form button:hover i {
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+.footer .footer-detail {
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+.footer .footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer .footer-icon a {
+  color: #b9b9b9;
+}
+.footer .footer-icon a i {
+  font-size: 24px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+.footer .footer-icon a:hover i {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  color: #e90a27;
 }/*# sourceMappingURL=index.css.map */

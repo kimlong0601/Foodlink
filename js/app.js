@@ -58,3 +58,12 @@ menuClose.addEventListener("click", () => {
     menu.classList.remove("active");
 });
 
+const headerShrink = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        headerShrink.classList.add('shrink');
+    }
+    else{
+        headerShrink.classList.remove('shrink');
+    }
+})

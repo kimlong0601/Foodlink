@@ -5,6 +5,19 @@
     top: 0;
     left: 0;
     z-index: 99;
+    transition: 0.3s ease;
+    @include tablet{
+        height: $header_tablet-height;
+    }
+    @include mobile{
+        height: $header_mobile-height;
+    }
+    &.shrink{
+        height: $header_shrink-height;
+        box-shadow: $box-shadow;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease;
+    }
     .container{
         height: 100%;
 
@@ -71,7 +84,7 @@
                         left: 5%;
                         font-size: $font-xl;
                         i{
-                            color: $main-bg;
+                            color: $text-white;
                         }
                     }
                 }
@@ -81,7 +94,7 @@
             #menu-toggle{
                 @include flex(center,center);
                 font-size: $font-xl;
-                color: $main-bg;
+                color: $text-white;
                 cursor: pointer;
                 display: none;
                 @include tablet{

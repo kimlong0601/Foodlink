@@ -18,6 +18,10 @@
             flex-direction: column;
             margin: 15px 0;
             img{
+                @include mobile{
+                    height: 150px;
+                    width: 100%;
+                }
                 width: 80%;
                 height: 150px;
             }
@@ -45,9 +49,12 @@
             }
         }
         .col-sm-6{
+           
             img{
                 width: 40%;
-                
+                @include mobile{
+                    width: 100%;
+                }
             }
         }
     }
